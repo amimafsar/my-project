@@ -15,9 +15,10 @@ Count total absent
 Print attendance percentage"'''
 
 attendance = [1,1,0,1,0,1,1,0,0,1,1]
-total_present = attendance.count(1)
-total_absent = attendance.count(0)
+total_present = sum(attendance)
+total_absent = total_present-len(attendance)
 attendance_percentage = (total_present / len(attendance)) * 100
 print(f"Total present: {total_present}")
 print(f"Total absent: {total_absent}")
 print(f"Attendance percentage: {attendance_percentage:.2f}%")
+
